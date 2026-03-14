@@ -47,11 +47,13 @@ void Framebuffer::drawLine(int x0, int y0, int x1, int y1, char c) {
 }
 
 int Framebuffer::toPixelX(float u) const {
+    if (width_ == 0) return 0;
     int x = static_cast<int>(std::round(u * static_cast<float>(width_ - 1)));
     return std::max(0, std::min(x, static_cast<int>(width_) - 1));
 }
 
 int Framebuffer::toPixelY(float v) const {
+    if (height_ == 0) return 0;
     int y = static_cast<int>(std::round((1.0f - v) * static_cast<float>(height_ - 1)));
     return std::max(0, std::min(y, static_cast<int>(height_) - 1));
 }

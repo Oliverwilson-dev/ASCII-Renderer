@@ -13,6 +13,24 @@ Everything lives in the `ascii` namespace. See [docs/Overview.md](docs/Overview.
 
 ## Build
 
+**Option 1: Build scripts (recommended)**
+
+From the project root:
+
+| Script | Unix / Linux / macOS | Windows |
+|--------|----------------------|--------|
+| **Build** (configure, build, run tests) | `./scripts/build/build.sh` | `scripts\build\build.bat` |
+| **Clean** (remove `build/` and `bin/`) | `./scripts/build/clean.sh` | `scripts\build\clean.bat` |
+| **Rebuild** (clean then build) | `./scripts/build/rebuild.sh` | `scripts\build\rebuild.bat` |
+
+- **build** — Creates `build/` if needed, runs CMake, compiles, then runs `./bin/ascii_tests`. You can run from the repo root or from any directory; the script switches to the repo root automatically.
+- **clean** — Deletes the `build/` and `bin/` directories so the next build is from scratch.
+- **rebuild** — Runs clean then build. Use after changing CMake options or when the build is in a bad state.
+
+On Unix, make the scripts executable once if needed: `chmod +x scripts/build/*.sh`
+
+**Option 2: Manual**
+
 From the project root:
 
 ```bash
@@ -46,6 +64,7 @@ Binaries are produced in the project **bin** directory (e.g. `bin/` at the repo 
 | **src/** | Implementation. One subfolder per area: `math/`, `framebuffer/`, `renderer/`. |
 | **examples/** | Standalone programs. `rotating_cube.cpp`, `moving_square.cpp`. |
 | **tests/** | Unit tests. `test_main.cpp` plus `math/mathTest.cpp`, `renderer/rendererTest.cpp`. |
+| **scripts/build/** | Build scripts: `build.sh` / `build.bat`, `clean.sh` / `clean.bat`, `rebuild.sh` / `rebuild.bat`. |
 | **docs/** | Detailed docs: [Overview](docs/Overview.md), [Framebuffer](docs/Framebuffer.md), [Renderer](docs/Renderer.md), [Math](docs/Math.md), [Entrypoint](docs/Entrypoint.md). |
 
 **Where to start reading:**

@@ -1,1 +1,3 @@
-build\
+build/
+docs/CODE_REVIEW.md
+bin/
