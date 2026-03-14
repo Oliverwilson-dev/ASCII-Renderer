@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "/home/ollie/Code/projects/cpp/Games/ASCII/bin/ascii_renderer"
+  "/home/ollie/Code/projects/cpp/Games/ASCII/bin/ascii_renderer.pdb"
   "CMakeFiles/ascii_renderer.dir/link.d"
   "CMakeFiles/ascii_renderer.dir/src/framebuffer/framebuffer.cpp.o"
   "CMakeFiles/ascii_renderer.dir/src/framebuffer/framebuffer.cpp.o.d"
@@ -14,8 +16,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/ascii_renderer.dir/src/math/vec3.cpp.o.d"
   "CMakeFiles/ascii_renderer.dir/src/renderer/renderer.cpp.o"
   "CMakeFiles/ascii_renderer.dir/src/renderer/renderer.cpp.o.d"
-  "bin/ascii_renderer"
-  "bin/ascii_renderer.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

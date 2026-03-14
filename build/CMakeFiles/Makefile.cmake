@@ -47,6 +47,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/ascii_renderer.dir/DependInfo.cmake"
+  "CMakeFiles/rotating_cube.dir/DependInfo.cmake"
+  "CMakeFiles/moving_square.dir/DependInfo.cmake"
   "CMakeFiles/ascii_tests.dir/DependInfo.cmake"
   )

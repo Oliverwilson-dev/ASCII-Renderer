@@ -117,17 +117,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named ascii_renderer
+# Target rules for targets named rotating_cube
 
 # Build rule for target.
-ascii_renderer: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ascii_renderer
-.PHONY : ascii_renderer
+rotating_cube: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rotating_cube
+.PHONY : rotating_cube
 
 # fast build rule for target.
-ascii_renderer/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ascii_renderer.dir/build.make CMakeFiles/ascii_renderer.dir/build
-.PHONY : ascii_renderer/fast
+rotating_cube/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rotating_cube.dir/build.make CMakeFiles/rotating_cube.dir/build
+.PHONY : rotating_cube/fast
+
+#=============================================================================
+# Target rules for targets named moving_square
+
+# Build rule for target.
+moving_square: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 moving_square
+.PHONY : moving_square
+
+# fast build rule for target.
+moving_square/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/moving_square.dir/build.make CMakeFiles/moving_square.dir/build
+.PHONY : moving_square/fast
 
 #=============================================================================
 # Target rules for targets named ascii_tests
@@ -142,12 +155,61 @@ ascii_tests/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ascii_tests.dir/build.make CMakeFiles/ascii_tests.dir/build
 .PHONY : ascii_tests/fast
 
+examples/moving_square.o: examples/moving_square.cpp.o
+.PHONY : examples/moving_square.o
+
+# target to build an object file
+examples/moving_square.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/moving_square.dir/build.make CMakeFiles/moving_square.dir/examples/moving_square.cpp.o
+.PHONY : examples/moving_square.cpp.o
+
+examples/moving_square.i: examples/moving_square.cpp.i
+.PHONY : examples/moving_square.i
+
+# target to preprocess a source file
+examples/moving_square.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/moving_square.dir/build.make CMakeFiles/moving_square.dir/examples/moving_square.cpp.i
+.PHONY : examples/moving_square.cpp.i
+
+examples/moving_square.s: examples/moving_square.cpp.s
+.PHONY : examples/moving_square.s
+
+# target to generate assembly for a file
+examples/moving_square.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/moving_square.dir/build.make CMakeFiles/moving_square.dir/examples/moving_square.cpp.s
+.PHONY : examples/moving_square.cpp.s
+
+examples/rotating_cube.o: examples/rotating_cube.cpp.o
+.PHONY : examples/rotating_cube.o
+
+# target to build an object file
+examples/rotating_cube.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rotating_cube.dir/build.make CMakeFiles/rotating_cube.dir/examples/rotating_cube.cpp.o
+.PHONY : examples/rotating_cube.cpp.o
+
+examples/rotating_cube.i: examples/rotating_cube.cpp.i
+.PHONY : examples/rotating_cube.i
+
+# target to preprocess a source file
+examples/rotating_cube.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rotating_cube.dir/build.make CMakeFiles/rotating_cube.dir/examples/rotating_cube.cpp.i
+.PHONY : examples/rotating_cube.cpp.i
+
+examples/rotating_cube.s: examples/rotating_cube.cpp.s
+.PHONY : examples/rotating_cube.s
+
+# target to generate assembly for a file
+examples/rotating_cube.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rotating_cube.dir/build.make CMakeFiles/rotating_cube.dir/examples/rotating_cube.cpp.s
+.PHONY : examples/rotating_cube.cpp.s
+
 src/framebuffer/framebuffer.o: src/framebuffer/framebuffer.cpp.o
 .PHONY : src/framebuffer/framebuffer.o
 
 # target to build an object file
 src/framebuffer/framebuffer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ascii_renderer.dir/build.make CMakeFiles/ascii_renderer.dir/src/framebuffer/framebuffer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rotating_cube.dir/build.make CMakeFiles/rotating_cube.dir/src/framebuffer/framebuffer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/moving_square.dir/build.make CMakeFiles/moving_square.dir/src/framebuffer/framebuffer.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ascii_tests.dir/build.make CMakeFiles/ascii_tests.dir/src/framebuffer/framebuffer.cpp.o
 .PHONY : src/framebuffer/framebuffer.cpp.o
 
@@ -156,7 +218,8 @@ src/framebuffer/framebuffer.i: src/framebuffer/framebuffer.cpp.i
 
 # target to preprocess a source file
 src/framebuffer/framebuffer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ascii_renderer.dir/build.make CMakeFiles/ascii_renderer.dir/src/framebuffer/framebuffer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rotating_cube.dir/build.make CMakeFiles/rotating_cube.dir/src/framebuffer/framebuffer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/moving_square.dir/build.make CMakeFiles/moving_square.dir/src/framebuffer/framebuffer.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ascii_tests.dir/build.make CMakeFiles/ascii_tests.dir/src/framebuffer/framebuffer.cpp.i
 .PHONY : src/framebuffer/framebuffer.cpp.i
 
@@ -165,40 +228,18 @@ src/framebuffer/framebuffer.s: src/framebuffer/framebuffer.cpp.s
 
 # target to generate assembly for a file
 src/framebuffer/framebuffer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ascii_renderer.dir/build.make CMakeFiles/ascii_renderer.dir/src/framebuffer/framebuffer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rotating_cube.dir/build.make CMakeFiles/rotating_cube.dir/src/framebuffer/framebuffer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/moving_square.dir/build.make CMakeFiles/moving_square.dir/src/framebuffer/framebuffer.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ascii_tests.dir/build.make CMakeFiles/ascii_tests.dir/src/framebuffer/framebuffer.cpp.s
 .PHONY : src/framebuffer/framebuffer.cpp.s
-
-src/main.o: src/main.cpp.o
-.PHONY : src/main.o
-
-# target to build an object file
-src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ascii_renderer.dir/build.make CMakeFiles/ascii_renderer.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
-
-src/main.i: src/main.cpp.i
-.PHONY : src/main.i
-
-# target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ascii_renderer.dir/build.make CMakeFiles/ascii_renderer.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
-
-src/main.s: src/main.cpp.s
-.PHONY : src/main.s
-
-# target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ascii_renderer.dir/build.make CMakeFiles/ascii_renderer.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
 
 src/math/mat2.o: src/math/mat2.cpp.o
 .PHONY : src/math/mat2.o
 
 # target to build an object file
 src/math/mat2.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ascii_renderer.dir/build.make CMakeFiles/ascii_renderer.dir/src/math/mat2.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rotating_cube.dir/build.make CMakeFiles/rotating_cube.dir/src/math/mat2.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/moving_square.dir/build.make CMakeFiles/moving_square.dir/src/math/mat2.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ascii_tests.dir/build.make CMakeFiles/ascii_tests.dir/src/math/mat2.cpp.o
 .PHONY : src/math/mat2.cpp.o
 
@@ -207,7 +248,8 @@ src/math/mat2.i: src/math/mat2.cpp.i
 
 # target to preprocess a source file
 src/math/mat2.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ascii_renderer.dir/build.make CMakeFiles/ascii_renderer.dir/src/math/mat2.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rotating_cube.dir/build.make CMakeFiles/rotating_cube.dir/src/math/mat2.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/moving_square.dir/build.make CMakeFiles/moving_square.dir/src/math/mat2.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ascii_tests.dir/build.make CMakeFiles/ascii_tests.dir/src/math/mat2.cpp.i
 .PHONY : src/math/mat2.cpp.i
 
@@ -216,7 +258,8 @@ src/math/mat2.s: src/math/mat2.cpp.s
 
 # target to generate assembly for a file
 src/math/mat2.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ascii_renderer.dir/build.make CMakeFiles/ascii_renderer.dir/src/math/mat2.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rotating_cube.dir/build.make CMakeFiles/rotating_cube.dir/src/math/mat2.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/moving_square.dir/build.make CMakeFiles/moving_square.dir/src/math/mat2.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ascii_tests.dir/build.make CMakeFiles/ascii_tests.dir/src/math/mat2.cpp.s
 .PHONY : src/math/mat2.cpp.s
 
@@ -225,7 +268,8 @@ src/math/mat3.o: src/math/mat3.cpp.o
 
 # target to build an object file
 src/math/mat3.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ascii_renderer.dir/build.make CMakeFiles/ascii_renderer.dir/src/math/mat3.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rotating_cube.dir/build.make CMakeFiles/rotating_cube.dir/src/math/mat3.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/moving_square.dir/build.make CMakeFiles/moving_square.dir/src/math/mat3.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ascii_tests.dir/build.make CMakeFiles/ascii_tests.dir/src/math/mat3.cpp.o
 .PHONY : src/math/mat3.cpp.o
 
@@ -234,7 +278,8 @@ src/math/mat3.i: src/math/mat3.cpp.i
 
 # target to preprocess a source file
 src/math/mat3.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ascii_renderer.dir/build.make CMakeFiles/ascii_renderer.dir/src/math/mat3.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rotating_cube.dir/build.make CMakeFiles/rotating_cube.dir/src/math/mat3.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/moving_square.dir/build.make CMakeFiles/moving_square.dir/src/math/mat3.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ascii_tests.dir/build.make CMakeFiles/ascii_tests.dir/src/math/mat3.cpp.i
 .PHONY : src/math/mat3.cpp.i
 
@@ -243,7 +288,8 @@ src/math/mat3.s: src/math/mat3.cpp.s
 
 # target to generate assembly for a file
 src/math/mat3.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ascii_renderer.dir/build.make CMakeFiles/ascii_renderer.dir/src/math/mat3.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rotating_cube.dir/build.make CMakeFiles/rotating_cube.dir/src/math/mat3.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/moving_square.dir/build.make CMakeFiles/moving_square.dir/src/math/mat3.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ascii_tests.dir/build.make CMakeFiles/ascii_tests.dir/src/math/mat3.cpp.s
 .PHONY : src/math/mat3.cpp.s
 
@@ -252,7 +298,8 @@ src/math/vec2.o: src/math/vec2.cpp.o
 
 # target to build an object file
 src/math/vec2.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ascii_renderer.dir/build.make CMakeFiles/ascii_renderer.dir/src/math/vec2.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rotating_cube.dir/build.make CMakeFiles/rotating_cube.dir/src/math/vec2.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/moving_square.dir/build.make CMakeFiles/moving_square.dir/src/math/vec2.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ascii_tests.dir/build.make CMakeFiles/ascii_tests.dir/src/math/vec2.cpp.o
 .PHONY : src/math/vec2.cpp.o
 
@@ -261,7 +308,8 @@ src/math/vec2.i: src/math/vec2.cpp.i
 
 # target to preprocess a source file
 src/math/vec2.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ascii_renderer.dir/build.make CMakeFiles/ascii_renderer.dir/src/math/vec2.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rotating_cube.dir/build.make CMakeFiles/rotating_cube.dir/src/math/vec2.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/moving_square.dir/build.make CMakeFiles/moving_square.dir/src/math/vec2.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ascii_tests.dir/build.make CMakeFiles/ascii_tests.dir/src/math/vec2.cpp.i
 .PHONY : src/math/vec2.cpp.i
 
@@ -270,7 +318,8 @@ src/math/vec2.s: src/math/vec2.cpp.s
 
 # target to generate assembly for a file
 src/math/vec2.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ascii_renderer.dir/build.make CMakeFiles/ascii_renderer.dir/src/math/vec2.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rotating_cube.dir/build.make CMakeFiles/rotating_cube.dir/src/math/vec2.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/moving_square.dir/build.make CMakeFiles/moving_square.dir/src/math/vec2.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ascii_tests.dir/build.make CMakeFiles/ascii_tests.dir/src/math/vec2.cpp.s
 .PHONY : src/math/vec2.cpp.s
 
@@ -279,7 +328,8 @@ src/math/vec3.o: src/math/vec3.cpp.o
 
 # target to build an object file
 src/math/vec3.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ascii_renderer.dir/build.make CMakeFiles/ascii_renderer.dir/src/math/vec3.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rotating_cube.dir/build.make CMakeFiles/rotating_cube.dir/src/math/vec3.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/moving_square.dir/build.make CMakeFiles/moving_square.dir/src/math/vec3.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ascii_tests.dir/build.make CMakeFiles/ascii_tests.dir/src/math/vec3.cpp.o
 .PHONY : src/math/vec3.cpp.o
 
@@ -288,7 +338,8 @@ src/math/vec3.i: src/math/vec3.cpp.i
 
 # target to preprocess a source file
 src/math/vec3.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ascii_renderer.dir/build.make CMakeFiles/ascii_renderer.dir/src/math/vec3.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rotating_cube.dir/build.make CMakeFiles/rotating_cube.dir/src/math/vec3.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/moving_square.dir/build.make CMakeFiles/moving_square.dir/src/math/vec3.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ascii_tests.dir/build.make CMakeFiles/ascii_tests.dir/src/math/vec3.cpp.i
 .PHONY : src/math/vec3.cpp.i
 
@@ -297,7 +348,8 @@ src/math/vec3.s: src/math/vec3.cpp.s
 
 # target to generate assembly for a file
 src/math/vec3.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ascii_renderer.dir/build.make CMakeFiles/ascii_renderer.dir/src/math/vec3.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rotating_cube.dir/build.make CMakeFiles/rotating_cube.dir/src/math/vec3.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/moving_square.dir/build.make CMakeFiles/moving_square.dir/src/math/vec3.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ascii_tests.dir/build.make CMakeFiles/ascii_tests.dir/src/math/vec3.cpp.s
 .PHONY : src/math/vec3.cpp.s
 
@@ -306,7 +358,8 @@ src/renderer/renderer.o: src/renderer/renderer.cpp.o
 
 # target to build an object file
 src/renderer/renderer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ascii_renderer.dir/build.make CMakeFiles/ascii_renderer.dir/src/renderer/renderer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rotating_cube.dir/build.make CMakeFiles/rotating_cube.dir/src/renderer/renderer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/moving_square.dir/build.make CMakeFiles/moving_square.dir/src/renderer/renderer.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ascii_tests.dir/build.make CMakeFiles/ascii_tests.dir/src/renderer/renderer.cpp.o
 .PHONY : src/renderer/renderer.cpp.o
 
@@ -315,7 +368,8 @@ src/renderer/renderer.i: src/renderer/renderer.cpp.i
 
 # target to preprocess a source file
 src/renderer/renderer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ascii_renderer.dir/build.make CMakeFiles/ascii_renderer.dir/src/renderer/renderer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rotating_cube.dir/build.make CMakeFiles/rotating_cube.dir/src/renderer/renderer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/moving_square.dir/build.make CMakeFiles/moving_square.dir/src/renderer/renderer.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ascii_tests.dir/build.make CMakeFiles/ascii_tests.dir/src/renderer/renderer.cpp.i
 .PHONY : src/renderer/renderer.cpp.i
 
@@ -324,7 +378,8 @@ src/renderer/renderer.s: src/renderer/renderer.cpp.s
 
 # target to generate assembly for a file
 src/renderer/renderer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ascii_renderer.dir/build.make CMakeFiles/ascii_renderer.dir/src/renderer/renderer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rotating_cube.dir/build.make CMakeFiles/rotating_cube.dir/src/renderer/renderer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/moving_square.dir/build.make CMakeFiles/moving_square.dir/src/renderer/renderer.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ascii_tests.dir/build.make CMakeFiles/ascii_tests.dir/src/renderer/renderer.cpp.s
 .PHONY : src/renderer/renderer.cpp.s
 
@@ -408,14 +463,18 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... ascii_renderer"
 	@echo "... ascii_tests"
+	@echo "... moving_square"
+	@echo "... rotating_cube"
+	@echo "... examples/moving_square.o"
+	@echo "... examples/moving_square.i"
+	@echo "... examples/moving_square.s"
+	@echo "... examples/rotating_cube.o"
+	@echo "... examples/rotating_cube.i"
+	@echo "... examples/rotating_cube.s"
 	@echo "... src/framebuffer/framebuffer.o"
 	@echo "... src/framebuffer/framebuffer.i"
 	@echo "... src/framebuffer/framebuffer.s"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
 	@echo "... src/math/mat2.o"
 	@echo "... src/math/mat2.i"
 	@echo "... src/math/mat2.s"

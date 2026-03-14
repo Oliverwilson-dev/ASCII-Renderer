@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/ollie/Code/projects/cpp/Games/ASCII/include -I/home/ollie/Code/projects/cpp/Games/ASCII/tests
 
-CXX_FLAGS = -std=gnu++17 -Wall -Wextra
+CXX_FLAGS = -std=gnu++23 -Wall -Wextra
 
