@@ -1,0 +1,4 @@
+/home/ollie/Code/projects/cpp/Games/ASCII/build/CMakeFiles/ascii_renderer.dir
+/home/ollie/Code/projects/cpp/Games/ASCII/build/CMakeFiles/ascii_tests.dir
+/home/ollie/Code/projects/cpp/Games/ASCII/build/CMakeFiles/edit_cache.dir
+/home/ollie/Code/projects/cpp/Games/ASCII/build/CMakeFiles/rebuild_cache.dir
